@@ -73,7 +73,7 @@ function welcome(session) {
 }
 
 function pong(session) {
-  sendMessage(session, `Pong`)
+  sendMessage(session, `Pooong`)
 }
 
 // example of how to store state on each user
@@ -94,7 +94,7 @@ function donate(session) {
 
 function sendMessage(session, message) {
   let controls = [
-    {type: 'button', label: 'Ping', value: 'ping'},
+    {type: 'button', label: 'Ping', action: 'Webview::https://www.larvalabs.com/cryptopunks/details/5953'},
     {type: 'button', label: 'Count', value: 'count'},
     {type: 'button', label: 'Donate', value: 'donate'}
   ]

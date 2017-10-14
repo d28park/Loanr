@@ -1,0 +1,33 @@
+Toshi Lending
+
+- setOwner() - automatic
+- setInterestRate(uint)
+- setDeadline(timestamp)
+- setPunishment(string)
+- setRecipient(addrs)
+- setLoanValue(uint)
+bot should then generate tx
+
+- getLoan(tx) - automated confirmation prompt with all information
+- checkLoanOwing() - returns currentBalance, ir, deadline, punishment
+- checkLoanOwed()
+- defaultOnLoan(tx)
+- payLoan(tx, uint) - check overpay, messageBox for % remaining
+/ requestInterestRate(uint)
+/ requestDeadline(timestamp)
+/ requestPunishment(string)
+
+
+General Workflow
+
+1. User A wants a loan from user B - they discuss terms
+2. User B calls Loanr to set up contract - Loanr holds ETH
+3. User A receives prompt with contract details
+4a. On accept, receives ETH from Loanr. 
+4b. On decline, ETH is returned to User B
+5. User A can pay back any portion of the loan, with interest continuing to accumulate on the remaining amount
+6. If the loan balance is not 0 by the deadline, User A is sent the punishment message
+
+Additional Functionality
+
+- Users can ask Loanr to check owning and owed loans
